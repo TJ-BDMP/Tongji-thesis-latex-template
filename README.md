@@ -27,7 +27,7 @@ latexmk -c
 - `assets/`：封面校标等模板资源。
 - `fonts/`：模板显式加载的中文字体文件。
 - `references.bib`：BibLaTeX 文献数据库。
-- `ALIGNMENT.md`：字体、字号、行距、标题间距等与参考样例的对齐说明。
+- `docs/ALIGNMENT.md`：字体、字号、行距、标题间距等与参考样例的对齐说明；同目录还包含开发过程中的 `findings.md`、`progress.md` 和 `task_plan.md`。
 
 ## 字体
 
