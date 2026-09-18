@@ -1,0 +1,38 @@
+# Progress
+
+## 2026-09-18
+- Located the 2025 Word and PDF requirement documents.
+- Located four supplied Chinese font files.
+- Started source extraction and environment inspection.
+- Rendered all 16 PDF pages to images and extracted layout-preserving text.
+- Recorded the formatting annotations from cover through back matter.
+- Added `tongjithesis.cls`, structured example content, GB/T 7714 bibliography support, declarations, and an optional spine page.
+- Extracted the embedded Tongji logo for exact-size cover use.
+- Compiled and visually checked the generated PDF against representative source pages.
+- Fixed front-matter numbering and removed an unintended blank page.
+- Final build succeeds cleanly and produces `main.pdf`; temporary build files were removed.
+- Began a stricter second-pass audit after user feedback that substantial visual differences remain.
+- Re-measured page blocks at 120 dpi and corrected symmetric margins, running-head position, footer position, and actual fixed leading.
+- Repositioned every Chinese-cover block and rebuilt the English metadata layout.
+- Matched abstract, contents, chapter, section, bibliography, appendix, acknowledgements, and CV title/body spacing.
+- Rebuilt declarations as a two-page 14 pt layout with no running header and matching signature/date placement.
+- Enabled and measured the separate spine page against the reference.
+- Completed three render/compare/fix iterations across every corresponding page.
+- Final XeLaTeX/Biber build succeeds with no LaTeX warnings, underfull boxes, overfull boxes, or unresolved references.
+- Applied the authoritative Word page geometry supplied by the user, including rule-based header positioning.
+- Verified the final PDF coordinates: the header rule is 56.695 pt from the top (2.000 cm), and footer glyphs end 42.519 pt from the bottom (1.500 cm).
+- Rebuilt the 14-page A4 PDF successfully with no LaTeX, box, or unresolved-reference warnings.
+- Corrected chapter headings to single spacing, 18 bp after-spacing, and a measured 24 bp offset beginning at the header rule.
+- Corrected the header reference point to the visible top of its text at 2 cm; retained the footer reference at the visible text bottom at 1.5 cm and revalidated the chapter offset from the shifted rule.
+- Set the running-header rule to 0.75 bp and enlarged the header box just enough to keep the build free of `fancyhdr` height warnings.
+- Switched chapter/section/subsection numbers and letters to SimHei through a heading-only Latin font family; body and TOC numerals stay in Times New Roman.
+- Rendered the abstract `关键词：` label as faux-bold SimSun via a new `songbold` family instead of the SimHei bold substitution.
+- Simplified bold SimSun handling: the `song` family and CJK main font now use `AutoFakeBold=2.5` directly, the separate `songbold` family was removed, and declaration/CV bold labels also render as bold SimSun.
+- Rebuilt the Chinese cover form with fixed-width label boxes, aligned colons/values, 31.2 bp row pitch, and reference-matched vertical positions.
+- Added independent English cover metadata commands and values; the English cover form is now a wrapping hanging-indent list with no overfull boxes.
+- Moved thesis metadata into `contents/information.tex` and both abstracts into `contents/abstract.tex`; `main.tex` now only orchestrates the document structure.
+- Renamed the metadata file to `contents/metadata.tex` and embedded PDF document properties (title, author, subject, keywords) driven by the thesis metadata, with `\thesiskeywords` for PDF keywords.
+- Restored abstract keywords as environment arguments, removed PDF keyword metadata, and fixed the `第1章` digit spacing to match the reference (4.31 pt per side via a local `CJKecglue` override).
+- Found and removed the unused `titlesec` package, which had been disabling all ctex section/subsection spacing; recalibrated chapter/section/subsection vertical spacing to the reference ink gaps (all within 0.05 pt) and verified chapter-style titles for 参考文献/附录/致谢.
+- Aligned heading number-to-title gaps to the sample's 0.5 em, and documented the complete font/size/leading/spacing alignment methodology in `ALIGNMENT.md`.
+- Matched the TOC leader-dot pitch to the sample's 6.0 pt (`\cftdotsep=2.25` instead of tocloft's 9.0 pt default).

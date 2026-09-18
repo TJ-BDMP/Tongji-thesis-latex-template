@@ -1,0 +1,22 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bcf
+*.blg
+*.run.xml
+*.synctex.gz
+*.xdv
+*.fls
+*.fdb_latexmk
+main.bbl
+main.pdf
+contents/*.aux
+.build/
+
+# macOS
+.DS_Store
+
+# Official reference documents (not redistributed)
+requirements/
