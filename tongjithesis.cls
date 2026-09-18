@@ -89,11 +89,18 @@
   subsection={
     format=\raggedright\heiti\heilatin\zihao{4},
     % Reference: section-to-subsection ink gap 28.63 pt, subsection-to-body 25.17 pt.
-    beforeskip=25.6bp,
+    beforeskip=26bp,
     afterskip=17.5bp,
     aftername=\enspace
   }
 }
+
+% Word adds the space after a heading and before the next heading; LaTeX
+% instead suppresses the preskip of a heading that directly follows another
+% (\@nobreak). Reset the flag for subsections so their preskip participates
+% in \addvspace and adjacent section/subsection headings match the sample.
+\let\tongji@origsubsection\subsection
+\renewcommand{\subsection}{\@nobreakfalse\tongji@origsubsection}
 
 \newcommand{\tongji@head}[1]{%
   \songti\zihao{5}#1\par\vspace{2pt}\hrule height 0.75bp

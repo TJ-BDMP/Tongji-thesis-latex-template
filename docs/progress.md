@@ -36,3 +36,4 @@
 - Found and removed the unused `titlesec` package, which had been disabling all ctex section/subsection spacing; recalibrated chapter/section/subsection vertical spacing to the reference ink gaps (all within 0.05 pt) and verified chapter-style titles for 参考文献/附录/致谢.
 - Aligned heading number-to-title gaps to the sample's 0.5 em, and documented the complete font/size/leading/spacing alignment methodology in `ALIGNMENT.md`.
 - Matched the TOC leader-dot pitch to the sample's 6.0 pt (`\cftdotsep=2.25` instead of tocloft's 9.0 pt default).
+- Fixed adjacent section/subsection spacing: `\subsection` now resets `\@nobreak` so its preskip participates in `\addvspace`, reproducing the sample's 28.63 pt gap (was 14.76 pt).
