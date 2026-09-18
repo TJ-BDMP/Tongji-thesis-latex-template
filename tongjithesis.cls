@@ -356,26 +356,26 @@
   \clearpage\pagestyle{tongjideclaration}\thispagestyle{tongjideclaration}\markboth{}{}
   \begingroup\linespread{1}\songti\fontsize{14bp}{26bp}\selectfont
   \begin{center}{\heiti\bfseries\fontsize{18bp}{22bp}\selectfont 同济大学学位论文原创性声明\par}\end{center}
-  \vspace{14bp}
+  \vspace{14bp}\noindent\hspace*{2em}%
   本人郑重声明：所呈交的学位论文《\tongji@title》，是本人在导师指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本学位论文的研究成果不包含任何他人创作的、已公开发表或者没有公开发表的作品的内容。对本论文所涉及的研究工作做出贡献的其他个人和集体，均已在文中以明确方式标明。本学位论文原创性声明的法律责任由本人承担。
 
   \vspace{14bp}\hspace*{8em}\textbf{学位论文作者签名：}
 
   \vspace{8bp}\hspace*{13em}\textbf{日期：}\hspace{2em}年\hspace{2em}月\hspace{2em}日
 
-  \vspace{10bp}\noindent\hbox to \linewidth{\leaders\hbox to 6pt{\hss-\hss}\hfill}\vspace{10bp}
+  \vspace{10bp}\noindent\rule{\linewidth}{0.5bp}\vspace{10bp}
   \begin{center}{\heiti\bfseries\fontsize{18bp}{22bp}\selectfont 同济大学学位论文版权使用授权书\par}\end{center}
-  \vspace{14bp}
+  \vspace{14bp}\noindent\hspace*{2em}%
   本人完全了解同济大学关于收集、保存、使用学位论文的规定，同意如下各项内容：按照学校要求提交学位论文的印刷本和电子版；学校有权保存论文的印刷本和电子版，并采用影印、缩印、扫描、数字化或其它手段保存论文；学校有权提供目录检索以及提供本论文全文或部分的阅览服务；学校有权按有关规定向国家有关部门或机构送交论文的复印件和电子版；允许论文被查阅和借阅。学校有权将本论文的全部或部分内容授权编入有关数据库出版传播。
 
-  \vspace{10bp}\noindent\textbf{本学位论文属于（在以下方框内打“√”）：}
+  \vspace{10bp}\textbf{本学位论文属于（在以下方框内打“√”）：}
 
-  \noindent $\square$ 保密，在\underline{\hspace{1.5cm}}年解密后适用本授权书。
+  $\square$ 保密，在\underline{\hspace{1.5cm}}年解密后适用本授权书。
 
-  \noindent $\square$ 不保密。
+  $\square$ 不保密。
 
   \vfill
-  \noindent\textbf{学位论文作者签名：}\hfill\textbf{指导教师签名：}
+  \noindent\textbf{学位论文作者签名：}\hfill\textbf{指导教师签名：}\hspace*{73.4pt}
   % \clearpage\thispagestyle{tongjideclaration}
 
   \noindent\textbf{日期：}\hspace{2em}年\hspace{2em}月\hspace{2em}日\hfill
